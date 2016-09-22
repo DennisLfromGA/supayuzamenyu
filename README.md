@@ -27,7 +27,7 @@ $ sudo menu
 `
 * example menu
 
-`
+```
 1) Minecraft (full Ubuntu in separate environment)
 
 2) Window (full Ubuntu in Chrome window)
@@ -39,4 +39,4 @@ $ sudo menu
 Please enter your choice (number):
 
 
-`
+```
