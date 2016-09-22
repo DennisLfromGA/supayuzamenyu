@@ -22,9 +22,9 @@ $ sudo bash ~/Downloads/supayuzamenyu-master/supayuzamenyu.sh
 ```
 ## Starting menu
 * run menu command to start menu then select number to do that menu item
-`
+```
 $ sudo menu
-`
+```
 * example menu
 
 ```
