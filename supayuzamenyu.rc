@@ -1,0 +1,9 @@
+#
+# title           :Supayuzamenyu runcom file
+# description     :a runcom file is required by Supayuzamenyu for each menu
+#
+
+#
+# Supayuzamenyu will bootstrap Crucial from this URL unless it already exists in the
+# installation dir
+CRUINSTALLER="https://raw.githubusercontent.com/ezzye/crouton-crucial/master/installer/crucial"
