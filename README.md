@@ -20,3 +20,18 @@ crosh> shell
 ```
 $ sudo bash ~/Downloads/supayuzamenyu-master/supayuzamenyu.sh
 ```
+## Starting menu
+* run menu command to start menu then select number to do that menu item
+`
+$ sudo menu
+`
+* example menu
+`
+
+1) Minecraft (full Ubuntu in separate environment)
+2) Window (full Ubuntu in Chrome window)
+3) Terminal (Ubuntu terminal in Chrome tab)
+4) Quit
+Please enter your choice (number):
+
+`
