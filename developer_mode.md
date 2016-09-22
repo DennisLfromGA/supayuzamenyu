@@ -1,4 +1,4 @@
-#Developer Mode
+# Developer Mode
 
 For the following devices, you’ll want to power your device off, find the recovery button press and hold the button, then power on the device while holding the recovery button.
 * LG Chromebase
