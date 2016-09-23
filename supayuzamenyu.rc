@@ -6,4 +6,4 @@
 #
 # Supayuzamenyu will bootstrap Crucial from this URL unless it already exists in the
 # installation dir
-CRUINSTALLER="https://raw.githubusercontent.com/ezzye/crouton-crucial/master/installer/crucial"
+CRUCIALFILES="https://github.com/qrkourier/crouton-crucial/archive/master.zip"

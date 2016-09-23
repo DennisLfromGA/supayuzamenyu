@@ -10,7 +10,7 @@ It uses [Crouton](https://github.com/dnschneid/crouton), the Chromium OS univers
 
 ## Installing menu
 * enter developer mode (see [developer mode](./developer_mode.md))
-* download and unpack [the zip file](https://github.com/ezzye/supayuzamenyu/archive/master.zip)
+* download and unzip [the zip file](https://github.com/ezzye/supayuzamenyu/archive/master.zip)
 * press ctrl-alt-t to open a crosh terminal see [10+ Commands Included In Chrome OS’s Hidden Crosh Shell](http://www.howtogeek.com/170648/10-commands-included-in-chrome-oss-hidden-crosh-shell/)
 * invoke bash as root
 ```
@@ -23,7 +23,7 @@ $ sudo bash ~/Downloads/supayuzamenyu-master/supayuzamenyu.sh
 ## Starting menu
 * run menu command to start menu then select number to do that menu item
 ```
-$ sudo menu
+$ sudo bash ~/Downloads/supayuzamenyu-master/menu
 ```
 * example menu
 
