@@ -8,6 +8,9 @@ It uses [Crouton](https://github.com/dnschneid/crouton), the Chromium OS univers
 * easy to install Ubuntu windows or environments
 * easy to delete Ubuntu environments
 
+## Installing Crouton Extension
+* install the [crouton extension](https://goo.gl/OVQOEt), which provides integration with Chromium OS so that can copy/cut/paste to and from Chrome and Ubuntu.  Also enables Ubuntu windows and tbs in Chrome.
+
 ## Installing menu
 * enter developer mode (see [developer mode](./developer_mode.md))
 * download and unzip [the zip file](https://github.com/ezzye/supayuzamenyu/archive/master.zip)
@@ -23,7 +26,7 @@ $ sudo bash ~/Downloads/supayuzamenyu-master/supayuzamenyu.sh
 ## Starting menu
 * run menu command to start menu then select number to do that menu item
 ```
-$ sudo bash ~/Downloads/supayuzamenyu-master/menu
+$ sudo bash ~/Downloads/supayuzamenyu-master/menu.sh
 ```
 * example menu
 
