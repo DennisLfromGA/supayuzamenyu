@@ -57,15 +57,15 @@ funcMenuLink() {
 
 # derive the supayuzamenyu installation dir
 THISWORKINGDIR="$(dirname $0)"
-echo THISWORKINGDIR
 
-# require a runcom file that exists and is not empty and is not this file and
-# is named ending *rc; if not defined then look for the sample runcom
-[[ -s "${THISRCFILE:=$THISWORKINGDIR/supayuzamenyu.rc}" && \
-  "$(readlink -f $THISRCFILE)" != "$(readlink -f $0)" && \
-  "$THISRCFILE" =~ rc$ ]] || { 
-    funcExit "$THISRCFILE is not a valid runcom file"; 
-}
+echo $THISWORKINGDIR
+
+# require the sample runcom
+
+THISRCFILE:="${THISWORKINGDIR}/supayuzamenyu.rc"
+
+echo $THISRCFILE
+
 set -o xtrace
 source $THISRCFILE
 set +o xtrace
