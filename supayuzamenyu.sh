@@ -55,7 +55,7 @@ funcMenuLink() {
 }
 
 
-derive the Crucial installation dir
+derive the supayuzamenyu installation dir
 THISWORKINGDIR="$(dirname $0)"
 echo THISWORKINGDIR
 
