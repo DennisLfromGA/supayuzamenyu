@@ -1,8 +1,15 @@
 #!/bin/bash
 #Chromebook chroot menu
 
+# PS3 – prompt used by “select” inside shell script
 PS3='Please enter your choice (number): '
-options=("Minecraft (full Ubuntu in separate environment)" "Window (full Ubuntu in Chrome window)" "Terminal (Ubuntu terminal in Chrome tab)" "Quit")
+
+£ menu options
+options[0]="--Launch-- Minecraft (full Ubuntu in separate environment)"
+options[1]="--Launch-- Ubuntu (full Ubuntu in Chrome window)"
+options[2]="--Launch-- Terminal (Ubuntu terminal in Chrome tab)"
+options[3]="--Quit menu--"
+
 select opt in "${options[@]}"
 do
 	case $opt in
