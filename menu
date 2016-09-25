@@ -4,7 +4,7 @@
 # PS3 – prompt used by “select” inside shell script
 PS3='Please enter your choice (number): '
 
-£ menu options
+# menu options
 options[0]="--Launch-- Minecraft (full Ubuntu in separate environment)"
 options[1]="--Launch-- Ubuntu (full Ubuntu in Chrome window)"
 options[2]="--Launch-- Terminal (Ubuntu terminal in Chrome tab)"
@@ -22,7 +22,7 @@ do
 		"${options[2]}")
 			sudo bash ~/Downloads/crouton-crucial-master/crucial.sh -c "xiwi -T xfce4-terminal"
 			;;
-		"Quit")
+		"${options[3]}")
 			break
 			;;
 		*) echo "Invalid option" ;;
