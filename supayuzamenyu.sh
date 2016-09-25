@@ -67,7 +67,7 @@ echo $THISWORKINGDIR
 
 # require the sample runcom
 
-THISRCFILE:="${THISWORKINGDIR}/supayuzamenyu.rc"
+THISRCFILE="${THISWORKINGDIR}/supayuzamenyu.rc"
 echo "This is rc file: "
 echo $THISRCFILE
 
