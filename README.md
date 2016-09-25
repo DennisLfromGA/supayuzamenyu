@@ -31,14 +31,10 @@ $ sudo menu
 * example menu
 
 ```
-1) Minecraft (full Ubuntu in separate environment)
-
-2) Window (full Ubuntu in Chrome window)
-
-3) Terminal (Ubuntu terminal in Chrome tab)
-
-4) Quit
-
+1) --Launch-- Minecraft (full Ubuntu in separate environment)
+2) --Launch-- Ubuntu (full Ubuntu in Chrome window)
+3) --Launch-- Terminal (Ubuntu terminal in Chrome tab)
+4) --Quit menu--
 Please enter your choice (number):
 
 
