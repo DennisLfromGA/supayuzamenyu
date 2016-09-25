@@ -54,9 +54,9 @@ funcDownload() {
 funcMenuLink() {
   # make file executable
   chmod +x ${THISWORKINGDIR}/menu
-  # create symbolic link to  menu to /usr/local/bin
+  # create symbolic link to  menu to /usr/local/bin if does not exist
   cd /usr/local/bin
-  sudo ln -s ${THISWORKINGDIR}/menu .
+  [ ! -L menu ] && sudo ln -s ${THISWORKINGDIR}/menu .
 }
 
 
