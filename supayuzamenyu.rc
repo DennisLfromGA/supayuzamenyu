@@ -6,4 +6,3 @@
 #
 # Supayuzamenyu will install Crucial from this URL
 CRUCIALFILES="https://github.com/qrkourier/crouton-crucial/archive/master.zip"
-THISWORKINGDIR="~/Downloads/supayuzamenyu-master"

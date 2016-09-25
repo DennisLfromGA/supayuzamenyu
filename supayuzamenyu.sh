@@ -53,11 +53,10 @@ funcDownload() {
 
 funcMenuLink() {
   # make file executable
-  chmod +x ~/Downloads/supayuzamenyu-master/menu
-
+  chmod +x ${THISWORKINGDIR}/menu
   # create symbolic link to  menu to /usr/local/bin
   cd /usr/local/bin
-  sudo ln -s ~/Downloads/supayuzamenyu-master/menu .
+  sudo ln -s ${THISWORKINGDIR}/menu .
 }
 
 
@@ -69,7 +68,7 @@ echo $THISWORKINGDIR
 # require the sample runcom
 
 THISRCFILE:="${THISWORKINGDIR}/supayuzamenyu.rc"
-
+echo "This is rc file: "
 echo $THISRCFILE
 
 set -o xtrace
