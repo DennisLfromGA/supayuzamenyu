@@ -47,7 +47,7 @@ funcDownload() {
   fi
   
   # unzip crouton-crucial-master.zip and delete zip file
-  unzip ${THISWORKINGDIR}/crouton-crucial-master.zip
+  unzip ${THISWORKINGDIR}/crouton-crucial-master.zip -d $THISWORKINGDIR
   rm ${THISWORKINGDIR}/crouton-crucial-master.zip 
  }
 
