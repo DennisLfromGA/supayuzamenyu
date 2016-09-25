@@ -34,16 +34,22 @@ Examples:
 
 funcDownload() {
   # download the crucial files zip to Download directory
+  # simple progress bar
+  # follow redirects
+  # connect-tiomeout in 60 seconds
+  # maximum for whole opertion 300 seconds
+  # retry 2 times
+  # output to crouton-crucial-master.zip
   if ! { umask 022 && \
     curl -# -L --connect-timeout 60 --max-time 300 --retry 2 "$CRUCIALFILES" -o \
-      "$THISWORKINGDIR/"; }; then
+      "$THISWORKINGDIR/crouton-crucial-master.zip"; }; then
     funcExit "Failed to download crouton-crucial-master.zip ."
   fi
   
   # unzip crouton-crucial-master.zip and delete zip file
-  unzip crouton-crucial-master.zip
-  rm crouton-crucial-master.zip 
-}
+  unzip ${THISWORKINGDIR}/crouton-crucial-master.zip
+  rm ${THISWORKINGDIR}/crouton-crucial-master.zip 
+ }
 
 funcMenuLink() {
   # make file executable
@@ -57,7 +63,7 @@ funcMenuLink() {
 
 # derive the supayuzamenyu installation dir
 THISWORKINGDIR="$(dirname $0)"
-
+echo "This is the working directory: "
 echo $THISWORKINGDIR
 
 # require the sample runcom
