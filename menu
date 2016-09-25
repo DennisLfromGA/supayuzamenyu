@@ -1,6 +1,11 @@
 #!/bin/bash
 #Chromebook chroot menu
 
+# derive the supayuzamenyu installation dir
+THISWORKINGDIR="$(dirname "$( readlink -f "$0")")"
+echo "This is the working directory: "
+echo $THISWORKINGDIR
+
 # PS3 – prompt used by “select” inside shell script
 PS3='Please enter your choice (number): '
 
@@ -20,7 +25,7 @@ do
 			sudo startxfce4 -X xiwi
 			;;
 		"${options[2]}")
-			sudo bash ~/Downloads/crouton-crucial-master/crucial.sh -c "xiwi -T xfce4-terminal"
+			sudo bash ~/Downloads/supayuzamenyu/crouton-crucial-master/crucial.sh -c "xiwi -T xfce4-terminal"
 			;;
 		"${options[3]}")
 			break
