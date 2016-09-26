@@ -33,6 +33,16 @@ Examples:
 }
 
 funcDownload() {
+
+  #download contents of crouton-crucial into $THISWORKINGDIR/
+
+  # Doing it with a "for" loop instead:
+  #   for i in "${colors[@]}"
+  #   do
+  #     echo "$i"
+  #   done
+
+
   # download the crucial files zip to Download directory
   # simple progress bar
   # follow redirects
@@ -46,9 +56,9 @@ funcDownload() {
     funcExit "Failed to download crouton-crucial-master.zip ."
   fi
   
-  # unzip crouton-crucial-master.zip and delete zip file
-  unzip ${THISWORKINGDIR}/crouton-crucial-master.zip -d $THISWORKINGDIR
-  rm ${THISWORKINGDIR}/crouton-crucial-master.zip 
+  # # unzip crouton-crucial-master.zip and delete zip file
+  # unzip ${THISWORKINGDIR}/crouton-crucial-master.zip -d $THISWORKINGDIR
+  # rm ${THISWORKINGDIR}/crouton-crucial-master.zip 
  }
 
 funcMenuLink() {
