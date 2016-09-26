@@ -10,6 +10,6 @@ CRUCIALFILES="https://github.com/qrkourier/crouton-crucial/archive/master.zip"
 
 CRUCIALDESTINATIONDIR="crouton-crucial-master"
 
-CRUCIALSOURCEDIR="https://github.com/ezzye/crouton-crucial/raw/master"
+CRUCIALSOURCEDIR="https://raw.githubusercontent.com/qrkourier/crouton-crucial/master"
 
 CRUCIALITEMS=( "README.md" "crucial.sh" "keepawake.sh" )
