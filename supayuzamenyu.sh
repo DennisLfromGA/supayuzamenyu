@@ -50,7 +50,7 @@ funcDownload() {
     echo "${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}"
     if ! { umask 022 && \
       curl -# -L --connect-timeout 60 --max-time 300 --retry 2 "${CRUCIALSOURCEDIR}/${item}" -o \
-        "${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}"; }; then
+        "${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/${item}"; }; then
       funcExit "Failed to download ${item} ."
     fi
   echo "$item"
