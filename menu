@@ -25,7 +25,7 @@ do
 			sudo startxfce4 -X xiwi
 			;;
 		"${options[2]}")
-			sudo bash ~/Downloads/supayuzamenyu/crouton-crucial-master/crucial.sh -c "xiwi -T xfce4-terminal"
+			sudo bash ~/Downloads/supayuzamenyu-master/crouton-crucial-master/crucial.sh -c "xiwi -T xfce4-terminal"
 			;;
 		"${options[3]}")
 			break
