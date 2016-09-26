@@ -36,29 +36,23 @@ funcDownload() {
 
   #download contents of crouton-crucial into $THISWORKINGDIR/
 
-  # Doing it with a "for" loop instead:
-  #   for i in "${colors[@]}"
-  #   do
-  #     echo "$i"
-  #   done
-
-
-  # download the crucial files zip to Download directory
-  # simple progress bar
-  # follow redirects
-  # connect-tiomeout in 60 seconds
-  # maximum for whole opertion 300 seconds
-  # retry 2 times
-  # output to crouton-crucial-master.zip
-  if ! { umask 022 && \
-    curl -# -L --connect-timeout 60 --max-time 300 --retry 2 "$CRUCIALFILES" -o \
-      "$THISWORKINGDIR/crouton-crucial-master.zip"; }; then
-    funcExit "Failed to download crouton-crucial-master.zip ."
-  fi
-  
-  # # unzip crouton-crucial-master.zip and delete zip file
-  # unzip ${THISWORKINGDIR}/crouton-crucial-master.zip -d $THISWORKINGDIR
-  # rm ${THISWORKINGDIR}/crouton-crucial-master.zip 
+  # load crucial files using a loop
+  for item in "${CRUCIALITEMS[@]}"
+  do
+    # download the i from $CRUCIALSOURCEDIR
+    # simple progress bar
+    # follow redirects
+    # connect-tiomeout in 60 seconds
+    # maximum for whole opertion 300 seconds
+    # retry 2 times
+    # output to $CRUCIALDESTINATIONDIR
+    if ! { umask 022 && \
+      curl -# -L --connect-timeout 60 --max-time 300 --retry 2 "${CRUCIALSOURCEDIR}/${item}" -o \
+        "${THISWORKINGDIR}/c${CRUCIALDESTINATIONDIR}"; }; then
+      funcExit "Failed to download ${item} ."
+    fi
+  echo "$item"
+  done
  }
 
 funcMenuLink() {
