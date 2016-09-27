@@ -7,7 +7,7 @@ THISWORKINGDIR="$(dirname "$( readlink -f "$0")")"
 # echo $THISWORKINGDIR
 
 # require the sample runcom
-THISRCFILE="${THISWORKINGDIR}/supayuzamenyu.rc"
+THISRCFILE="${THISWORKINGDIR}supayuzamenyu.rc"
 #load rc file
 set -o xtrace
 source $THISRCFILE
@@ -35,7 +35,7 @@ do
 			break
 			;;
 		"${options[2]}")
-			sudo bash ${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.sh -c "xiwi -T xfce4-terminal"
+			sudo bash ${THISWORKINGDIR}${CRUCIALDESTINATIONDIR}/crucial.sh -c "xiwi -T xfce4-terminal"
 			break
 			;;
 		"${options[3]}")
