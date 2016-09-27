@@ -63,6 +63,11 @@ funcMenuLink() {
   # create symbolic link to  menu to /usr/local/bin if does not exist
   cd /usr/local/bin
   [ ! -L menu ] && sudo ln -s ${THISWORKINGDIR}/menu .
+  
+  echo "ready to install crouton"
+  # install crouton
+  cd ${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}
+  sudo bash crucial.sh -s
 }
 
 
@@ -84,12 +89,9 @@ set +o xtrace
 
 # Download crucial files and unzip
 funcDownload
-# create link to menu in /usr/local/bin
+# create link to menu in /usr/local/bin and install crouton
 funcMenuLink
 
-# install crouton
-cd ${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}
-sudo bash crucial.sh -i
 
 
 
