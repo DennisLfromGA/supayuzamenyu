@@ -3,8 +3,8 @@
 
 # derive the supayuzamenyu installation dir
 THISWORKINGDIR="$(dirname "$( readlink -f "$0")")"
-echo "This is the working directory: "
-echo $THISWORKINGDIR
+# echo "This is the working directory: "
+# echo $THISWORKINGDIR
 
 # PS3 – prompt used by “select” inside shell script
 PS3='Please enter your choice (number): '
