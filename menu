@@ -18,7 +18,7 @@ set +o xtrace
 PS3='Please enter your choice (number): '
 
 # menu options
-options[0]="--Launch-- Minecraft (full Ubuntu in separate environment)"
+options[0]="--Launch-- Full Ubuntu (full Ubuntu in separate environment)"
 options[1]="--Launch-- Ubuntu (full Ubuntu in Chrome window)"
 options[2]="--Launch-- Terminal (Ubuntu terminal in Chrome tab)"
 options[3]="--Quit menu--"
