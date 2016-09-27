@@ -87,6 +87,9 @@ funcDownload
 # create link to menu in /usr/local/bin
 funcMenuLink
 
+# install crouton
+cd ${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}
+sudo bash crucial.sh -i
 
 
 
