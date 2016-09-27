@@ -39,8 +39,8 @@ Please enter your choice (number):
 
 
 ```
-## Files
-* before creating new Ubuntu edit crucial.rc file (~/Downloads/crouton-crucial-master/crucial.rc)
+## Files for advanced users
+* optionally, before creating new Ubuntu edit crucial.rc file (~/Downloads/crouton-crucial-master/crucial.rc)
 * crucial.rc: annotated runcom file for Crouton environments; required by crucial.sh; edit this first
 * crucial.sh: starts a Crouton chroot; optionally first installing, backing up, or updating
 * keepawake.sh: a wrapper script optionally called by crucial.sh that disables suspend before enter-chroot
