@@ -2,12 +2,12 @@
 #Chromebook chroot menu
 
 # derive the supayuzamenyu installation dir
-THISWORKINGDIR="$(dirname "$( readlink -f "$0")")"
+THISWORKINGDIR="$(dirname "$( readlink -f "/usr/local/bin/menu")")"
 # echo "This is the working directory: "
 # echo $THISWORKINGDIR
 
 # require the sample runcom
-THISRCFILE="${THISWORKINGDIR}supayuzamenyu.rc"
+THISRCFILE="${THISWORKINGDIR}/supayuzamenyu.rc"
 #load rc file
 set -o xtrace
 source $THISRCFILE
@@ -35,7 +35,7 @@ do
 			break
 			;;
 		"${options[2]}")
-			sudo bash ${THISWORKINGDIR}${CRUCIALDESTINATIONDIR}/crucial.sh -c "xiwi -T xfce4-terminal"
+			sudo bash ${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.sh -c "xiwi -T xfce4-terminal"
 			break
 			;;
 		"${options[3]}")
