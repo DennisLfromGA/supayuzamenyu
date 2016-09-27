@@ -20,12 +20,15 @@ do
 	case $opt in
 		"${options[0]}")
 			sudo startxfce4 -X xorg
+			break
 			;;
 		"${options[1]}")
 			sudo startxfce4 -X xiwi
+			break
 			;;
 		"${options[2]}")
 			sudo bash ~/Downloads/supayuzamenyu-master/crouton-crucial-master/crucial.sh -c "xiwi -T xfce4-terminal"
+			break
 			;;
 		"${options[3]}")
 			break
