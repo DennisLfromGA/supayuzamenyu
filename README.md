@@ -9,7 +9,7 @@ It uses [Crouton](https://github.com/dnschneid/crouton), the Chromium OS univers
 * easy to delete Ubuntu environments
 
 ## Installing Crouton Extension
-* install the [crouton extension from Chrome Store](https://goo.gl/OVQOEt), which provides integration with Chromium OS so that can copy/cut/paste to and from Chrome and Ubuntu.  Also enables Ubuntu windows and tbs in Chrome.
+* install the [crouton extension from Chrome Store](https://goo.gl/OVQOEt), which provides integration with Chromium OS so that can copy/cut/paste to and from Chrome and Ubuntu.  Also enables Ubuntu windows and tabs in Chrome.
 
 ## Installing menu
 * enter developer mode (see [developer mode](./developer_mode.md))
