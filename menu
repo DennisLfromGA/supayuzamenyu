@@ -8,7 +8,10 @@ THISWORKINGDIR="$(dirname "$( readlink -f "$0")")"
 
 # require the sample runcom
 THISRCFILE="${THISWORKINGDIR}/supayuzamenyu.rc"
-
+#load rc file
+set -o xtrace
+source $THISRCFILE
+set +o xtrace
 
 
 # PS3 – prompt used by “select” inside shell script
