@@ -53,3 +53,21 @@ or
 sudo edit-chroot -d evilchroot
 ```
 
+## Common
+# This isn't a real target; it's the boilerplate that the other targets source.
+# The targets are simply sourced inside of install.sh, and so can expect to have
+# access to all all-caps variables (by convention; not a technical restriction).
+
+# Additionally, this common script expects the sourcing script to set
+# DESCRIPTION with the description of the target, and REQUIRES with a
+# space-separated list of other targets it needs.
+
+# The script can also specify a space-separated list of targets in PROVIDES;
+# this will prevent other targets from installing when this one is done first.
+
+# Finally, targets can set HOSTBIN, CHROOTBIN, and CHROOTETC with a
+# space-separated list of files to copy from host-bin, chroot-bin, and
+# chroot-etc into the appropriate places.
+
+# All targets must be idempotent since the user may Ctrl-C the process and run
+# it again.
