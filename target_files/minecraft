@@ -491,3 +491,18 @@ fi
 # Break out of the subshell.
 exit
 
+
+## MINECRFT EXAMPLE
+
+sudo apt-get install software-properties-common python-software-properties
+
+sudo add-apt-repository ppa:minecraft-installer-peeps/minecraft-installer
+
+sudo apt-get update
+
+sudo apt-get install minecraft-installer
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+
