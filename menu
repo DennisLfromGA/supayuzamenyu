@@ -22,6 +22,7 @@ options[0]="--Launch-- Full Ubuntu (full Ubuntu in separate environment)"
 options[1]="--Launch-- Ubuntu (full Ubuntu in Chrome window)"
 options[2]="--Launch-- Terminal (Ubuntu terminal in Chrome tab)"
 options[3]="--Quit menu--"
+options[4]="--Delete-- Delete Ubuntu (deletes all instances of Ubuntu)"
 
 clear
 
@@ -41,6 +42,10 @@ do
 			break
 			;;
 		"${options[3]}")
+			break
+			;;
+		"${options[4]}")
+			sudo edit-chroot -d trusty
 			break
 			;;
 		*) echo "Invalid option" ;;
