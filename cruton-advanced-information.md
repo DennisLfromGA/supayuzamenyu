@@ -104,3 +104,40 @@ _Notes_
 <a name="myfootnote1">1</a>: When using the 'xiwi-app', if the Linux app that is being launched forks (to the background) - use the 'xiwi' ``-f`` option to keep xiwi running until all windows are closed. For more info, please see [this page](https://github.com/dnschneid/crouton/wiki/crouton-in-a-Chromium-OS-window-%28xiwi%29) in the Wiki.
  
 Remember that you can copy and paste in the shell with Ctrl+Shift+C and Ctrl+Shift+V. For a bonus, try the up arrow key, the next time you're in the shell. 
+
+# Running individual applications in windows and tabs
+With xiwi installed, you do not need a desktop environment.  You can launch apps on an individual basis in a Chromium OS window or tab.
+
+1. Enter your chroot to get a command line: `sudo enter-chroot`
+2. Launch your app via the `xiwi` command: `xiwi gimp`
+3. Use `xiwi -T gimp` to launch in a tab, or `xiwi -F gimp` to launch full-screen.
+4. You can combine those into a single command `sudo enter-chroot xiwi -T gimp`.
+5. You can silence output and run the command in the background via `sudo enter-chroot -b xiwi -T gimp`.
+
+If your application forks and quits, xiwi may get confused and quit as well (you'll get an error/quit when the window launches).  Search your application's documentation for a parameter that prevents forking (oftentimes it's `-f`).  If you can't find one, you can pass `-f` to xiwi itself (e.g., `xiwi -f gvim`), and xiwi will not close unless there are no applications visible and you close the Chromium OS window. It's always better to use the appropriate options on the application's side of things if possible, though (`xiwi gvim -f` in this example).
+
+You can pass parameters to your application like normal, but remember that if you use the combined form (e.g., `sudo enter-chroot xiwi gimp`), your current directory is ignored.  So even if you're in your Downloads folder and want to edit img.jpg, `sudo enter-chroot -b xiwi gimp ~/Downloads/img.jpg` is necessary.
+
+Single-window applications work better than multi-window applications, but if you end up with multiple windows, you can switch between them via either the tabs at the top, or via the Ctrl+Alt+Tab and Ctrl+Alt+Shift+Tab keyboard shortcuts.  Ctrl+Alt+Shift+Escape acts the same as the close button on most windows.  If a pop-up window appears in a weird place, you can either drag-move it, or Alt+drag to resize it.
+
+If you launch applications via aliases, the xiwi command will not know about them.  You can add the following snippet to your .bashrc/.zshrc to handle basic aliases:
+
+```
+# Wrap xiwi so that aliases work
+xiwi() {
+    local xiwiargs=''
+    while [ "${1#-}" != "$1" ]; do
+        xiwiargs="$xiwiargs $1"
+        shift
+    done
+    local cmd="`alias "$1" 2>/dev/null`"
+    if [ -z "$cmd" ]; then
+        cmd="$1"
+    else
+        eval "cmd=${cmd#*=}"
+        cmd="env $cmd"
+    fi
+    shift
+    eval "/usr/local/bin/xiwi $xiwiargs $cmd \"\$@\""
+}
+```
