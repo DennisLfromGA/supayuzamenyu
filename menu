@@ -36,30 +36,26 @@ select opt in "${options[@]}"
 do
 	case $opt in
 		"${options[0]}")
-			echo ${CRSTARTCMD} -X xorg
-			sudo ${CRSTARTCMD} -X xorg
+			sudo "${CRSTARTCMD}" -X xorg
 			break
 			;;
 		"${options[1]}")
-			echo ${CRSTARTCMD} -X xiwi
-			sudo ${CRSTARTCMD} -X xiwi
+			sudo "${CRSTARTCMD}" -X xiwi
 			break
 			;;
 		"${options[2]}")
-			echo ${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.sh -c "xiwi -T xfce4-terminal"
-			sudo bash ${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.sh -c "xiwi -T xfce4-terminal"
+			sudo bash "${THISWORKINGDIR}"/"${CRUCIALDESTINATIONDIR}"/crucial.sh -c "xiwi -T xfce4-terminal"
 			break
 			;;
 		"${options[3]}")
 			break
 			;;
 		"${options[4]}")
-			echo ${CRNAME}
-			sudo edit-chroot -d ${CRNAME}
+			sudo edit-chroot -d "${CRNAME}"
 			break
 			;;
 		"${options[5]}")
-			sudo bash ${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.sh -i
+			sudo bash "${THISWORKINGDIR}"/"${CRUCIALDESTINATIONDIR}"/crucial.sh -i
 			break
 			;;
 		*) echo "Invalid option" ;;
