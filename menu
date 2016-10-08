@@ -23,6 +23,7 @@ options[1]="--Launch-- Ubuntu (full Ubuntu in Chrome window)"
 options[2]="--Launch-- Terminal (Ubuntu terminal in Chrome tab)"
 options[3]="--Quit menu--"
 options[4]="--Delete-- Delete Ubuntu (deletes all instances of Ubuntu)"
+options[5]="--Create-- Create a NEW Ubuntu (creates a new separate Ubuntu enviroment)"
 
 clear
 
@@ -46,6 +47,10 @@ do
 			;;
 		"${options[4]}")
 			sudo edit-chroot -d trusty
+			break
+			;;
+		"${options[5]}")
+			sudo bash ${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.sh -i
 			break
 			;;
 		*) echo "Invalid option" ;;
