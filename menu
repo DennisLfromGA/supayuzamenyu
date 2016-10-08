@@ -26,9 +26,10 @@ PS3='Please enter your choice (number): '
 options[0]="--Launch-- Full Ubuntu (full Ubuntu in separate environment)"
 options[1]="--Launch-- Ubuntu (full Ubuntu in Chrome window)"
 options[2]="--Launch-- Terminal (Ubuntu terminal in Chrome tab)"
-options[3]="--Quit menu--"
-options[4]="--Delete-- Delete Ubuntu (deletes all instances of Ubuntu)"
-options[5]="--Create-- Create a NEW Ubuntu (this takes a long while then launches in Chrome Window)"
+options[3]="--Launch-- An Ubuntu Application in Tab (e.g. bash or gimp)"
+options[4]="--Quit menu--"
+options[5]="--Delete-- Delete Ubuntu (deletes all instances of Ubuntu)"
+options[6]="--Create-- Create a NEW Ubuntu (this takes a long while then launches in Chrome Window)"
 
 clear
 
@@ -48,13 +49,19 @@ do
 			break
 			;;
 		"${options[3]}")
+			echo "Type application name e.g bash or gimp then [ENTER]:"
+			read APPLICATION
+			sudo enter-chroot xiwi -T "${APPLICATION}"
 			break
 			;;
 		"${options[4]}")
-			sudo edit-chroot -d "${CRRELEASE}"
 			break
 			;;
 		"${options[5]}")
+			sudo edit-chroot -d "${CRRELEASE}"
+			break
+			;;
+		"${options[6]}")
 			sudo bash "${THISWORKINGDIR}"/"${CRUCIALDESTINATIONDIR}"/crucial.sh -i
 			break
 			;;
