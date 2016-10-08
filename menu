@@ -13,6 +13,11 @@ set -o xtrace
 source $THISRCFILE
 set +o xtrace
 
+CRUCIALRCFILE="${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.rc"
+set -o xtrace
+source $CRUCIALRCFILE
+set +o xtrace
+
 
 # PS3 – prompt used by “select” inside shell script
 PS3='Please enter your choice (number): '
@@ -31,11 +36,11 @@ select opt in "${options[@]}"
 do
 	case $opt in
 		"${options[0]}")
-			sudo startxfce4 -X xorg
+			sudo ${CRSTARTCMD} -X xorg
 			break
 			;;
 		"${options[1]}")
-			sudo startxfce4 -X xiwi
+			sudo ${CRSTARTCMD} -X xiwi
 			break
 			;;
 		"${options[2]}")
@@ -46,7 +51,7 @@ do
 			break
 			;;
 		"${options[4]}")
-			sudo edit-chroot -d trusty
+			sudo edit-chroot -d ${CRNAME}
 			break
 			;;
 		"${options[5]}")
