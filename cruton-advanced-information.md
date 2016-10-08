@@ -141,6 +141,8 @@ xiwi() {
     eval "/usr/local/bin/xiwi $xiwiargs $cmd \"\$@\""
 }
 ```
+
+## Reducing the Load Due to ChromeOS
 ChromeOS can run a lot of Chrome processes. If you are working primarily in your crouton chroot, then this can place an excessive load on the system.
 
 I've found that it is possible to kill a lot of these Chrome processes without doing anything damaging. These should be the ChromeOS chrome processes: <code>/opt/chrome/chrome/chrome</code>
