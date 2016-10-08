@@ -36,12 +36,14 @@ $ bash menu
 3) --Launch-- Terminal (Ubuntu terminal in Chrome tab)
 4) --Quit menu--
 5) --Delete-- Delete Ubuntu (deletes all instances of Ubuntu)
-6) --Create-- Create a NEW Ubuntu (this takes a while to create new enviroment)
+6) --Create-- Create a NEW Ubuntu (this takes a long while to create new enviroment)
 Please enter your choice (number):
 
 
 ```
 * You can re-enter menu at any time by typing `bah menu` at the shell prompt `$`.
+
+* IMPORTANT when creating a new Ubuntu enviroment last step seems to be entering a user name but you need to return then enter a password (then return) and then re-enter same password (then return) to complet setup.  
 
 ## Files for advanced users
 * optionally, before creating new Ubuntu edit crucial.rc file (~/Downloads/crouton-crucial-master/crucial.rc)
