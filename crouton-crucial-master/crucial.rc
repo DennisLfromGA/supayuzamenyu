@@ -23,7 +23,7 @@ CRPATH=/usr/local  # default
 # targets are additive and there is not an automatic way to remove them;
 ## for Chromebook Pixel add "touch";
 ## for X in a Chrome window, audio playback via CRAS, 2-way clipboard sync;
-CRTARGETS=xfce,cli-extra,keyboard,xiwi
+CRTARGETS=xfce,cli-extra,keyboard,xiwi,xorg
 
 #
 # where to stash the backup tarballs created by edit-chroot
