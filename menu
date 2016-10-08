@@ -51,7 +51,7 @@ do
 			break
 			;;
 		"${options[4]}")
-			sudo edit-chroot -d "${CRNAME}"
+			sudo edit-chroot -d "${CRRELEASE}"
 			break
 			;;
 		"${options[5]}")
