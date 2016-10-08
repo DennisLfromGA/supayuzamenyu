@@ -35,10 +35,14 @@ $ bash menu
 2) --Launch-- Ubuntu (full Ubuntu in Chrome window)
 3) --Launch-- Terminal (Ubuntu terminal in Chrome tab)
 4) --Quit menu--
+5) --Delete-- Delete Ubuntu (deletes all instances of Ubuntu)
+6) --Create-- Create a NEW Ubuntu (this takes a while to create new enviroment)
 Please enter your choice (number):
 
 
 ```
+* You can re-enter menu at any time by typing `bah menu` at the shell prompt `$`.
+
 ## Files for advanced users
 * optionally, before creating new Ubuntu edit crucial.rc file (~/Downloads/crouton-crucial-master/crucial.rc)
 * crucial.rc: annotated runcom file for Crouton environments; required by crucial.sh; edit this first
