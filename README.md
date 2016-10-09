@@ -23,8 +23,9 @@ crosh> shell
 ```
 $ sudo bash ~/Downloads/supayuzamenyu-master/supayuzamenyu.sh
 ```
+* this opens a new Ubuntu enviroment
 ## Starting menu
-* run menu command to start menu then select number to do that menu item
+* run menu command to start menu in a new shell window then select number to do that menu item
 ```
 $ bash menu
 ```
