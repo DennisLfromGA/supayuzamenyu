@@ -1,23 +1,5 @@
 #!/bin/bash -e
-#Chromebook chroot menu
-
-# derive the supayuzamenyu installation dir
-THISWORKINGDIR="$(dirname "$( readlink -f "/usr/local/bin/menu")")"
-# echo "This is the working directory: "
-# echo $THISWORKINGDIR
-
-# require the sample runcom
-THISRCFILE="${THISWORKINGDIR}/supayuzamenyu.rc"
-#load rc file
-set -o xtrace
-source $THISRCFILE
-set +o xtrace
-
-CRUCIALRCFILE="${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.rc"
-set -o xtrace
-source $CRUCIALRCFILE
-set +o xtrace
-
+#Chromebook menu
 
 # PS3 – prompt used by “select” inside shell script
 PS3='Please enter your choice (number): '
