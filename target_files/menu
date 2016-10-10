@@ -11,7 +11,7 @@ options[2]="--Install-- Gimp Image Editor"
 options[3]="--Install-- Alacarte Ubuntu Menu builder"
 options[4]="--Quit menu ------------------------------------------------"
 
-
+cd ~
 clear
 
 select opt in "${options[@]}"
