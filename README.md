@@ -1,4 +1,4 @@
-# supayuzamenyu
+# supayuzamenyu (for google chromebooks)
 Quick and easy menu for installing and launching Ubuntu (using Crouton and Crucial) on chromebooks and boxes
 
 It uses [Crouton](https://github.com/dnschneid/crouton), the Chromium OS universal chroot environment and [crouton-crucial](https://github.com/qrkourier/crouton-crucial), Helper scripts for Crouton

@@ -1,0 +1,56 @@
+#!/bin/bash -e
+#Chromebook chroot menu
+
+# derive the supayuzamenyu installation dir
+THISWORKINGDIR="$(dirname "$( readlink -f "/usr/local/bin/menu")")"
+# echo "This is the working directory: "
+# echo $THISWORKINGDIR
+
+# require the sample runcom
+THISRCFILE="${THISWORKINGDIR}/supayuzamenyu.rc"
+#load rc file
+set -o xtrace
+source $THISRCFILE
+set +o xtrace
+
+CRUCIALRCFILE="${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.rc"
+set -o xtrace
+source $CRUCIALRCFILE
+set +o xtrace
+
+
+# PS3 – prompt used by “select” inside shell script
+PS3='Please enter your choice (number): '
+
+# menu options
+options[0]="--Install-- Minecraft Game"
+options[1]="--Install-- Eclipse Integrated Development Editor"
+options[2]="--Install-- Gimp Image Editor"
+options[3]="--Install-- Alacarte Ubuntu Menu builder"
+options[4]="--Quit menu ------------------------------------------------"
+
+
+clear
+
+select opt in "${options[@]}"
+do
+	case $opt in
+		"${options[0]}")
+			./minecraft.sh
+			;;
+		"${options[1]}")
+			./eclipse.sh
+			;;
+		"${options[2]}")
+			./gimp.sh
+			;;
+		"${options[3]}")
+			./alacarte.sh
+			;;
+		"${options[4]}")
+			break
+			;;
+		*) echo "Invalid option" ;;
+	esac
+done
+

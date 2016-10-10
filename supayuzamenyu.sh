@@ -58,11 +58,20 @@ funcDownload() {
  }
 
 funcMenuLink() {
-  # make file executable
+  # make files executable
   chmod +x ${THISWORKINGDIR}/menu
+  chmod a+x ${THISWORKINGDIR}/target_files/menu
+
+  # create symbolic link to menu to /usr/local/bin/chroot/${CRRELEASE}/usr/local/bin if does not exist
+  cd /usr/local/bin/chroot/${CRRELEASE}/usr/local/bin
+  [ ! -L menu ] && sudo ln -s ${THISWORKINGDIR}/menu .
+
+
   # create symbolic link to  menu to /usr/local/bin if does not exist
   cd /usr/local/bin
   [ ! -L menu ] && sudo ln -s ${THISWORKINGDIR}/menu .
+
+
   
   echo "ready to install crouton"
   # install crouton
@@ -86,6 +95,10 @@ set -o xtrace
 source $THISRCFILE
 set +o xtrace
 
+CRUCIALRCFILE="${THISWORKINGDIR}/${CRUCIALDESTINATIONDIR}/crucial.rc"
+set -o xtrace
+source $CRUCIALRCFILE
+set +o xtrace
 
 # Download crucial files and unzip
 funcDownload
