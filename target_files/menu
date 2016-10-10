@@ -19,15 +19,19 @@ do
 	case $opt in
 		"${options[0]}")
 			sh /usr/local/bin/target_files/minecraft.sh
+			break
 			;;
 		"${options[1]}")
 			sh /usr/local/bin/target_files/eclipse.sh
+			break
 			;;
 		"${options[2]}")
 			sh /usr/local/bin/target_files/gimp.sh
+			break
 			;;
 		"${options[3]}")
 			sh /usr/local/bin/target_files/alacarte.sh
+			break
 			;;
 		"${options[4]}")
 			break
