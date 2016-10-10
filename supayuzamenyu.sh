@@ -66,6 +66,7 @@ funcMenuLink() {
   cd /usr/local/chroots/${CRRELEASE}/usr/local/bin
   cp ${THISWORKINGDIR}/target_files/menu .
   chmod a+x menu
+  cp ${THISWORKINGDIR}/target_files .
 
 
   # create symbolic link to  menu to /usr/local/bin if does not exist
