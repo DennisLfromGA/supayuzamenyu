@@ -18,16 +18,16 @@ select opt in "${options[@]}"
 do
 	case $opt in
 		"${options[0]}")
-			~/Downloads/target_files/minecraft.sh
+			sh /usr/local/bin/target_files/minecraft.sh
 			;;
 		"${options[1]}")
-			~/Downloads/target_files/eclipse.sh
+			sh /usr/local/bin/target_files/eclipse.sh
 			;;
 		"${options[2]}")
-			~/Downloads/target_files/gimp.sh
+			sh /usr/local/bin/target_files/gimp.sh
 			;;
 		"${options[3]}")
-			~/Downloads/target_files/alacarte.sh
+			sh /usr/local/bin/target_files/alacarte.sh
 			;;
 		"${options[4]}")
 			break
