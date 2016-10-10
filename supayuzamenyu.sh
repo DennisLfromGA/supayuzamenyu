@@ -64,7 +64,8 @@ funcMenuLink() {
 
   # create symbolic link to menu to /usr/local/bin/chroot/${CRRELEASE}/usr/local/bin if does not exist
   cd /usr/local/chroots/${CRRELEASE}/usr/local/bin
-  [ ! -L menu ] && sudo ln -s ${THISWORKINGDIR}/menu .
+  cp ${THISWORKINGDIR}/target_files/menu .
+  chmod a+x menu
 
 
   # create symbolic link to  menu to /usr/local/bin if does not exist
