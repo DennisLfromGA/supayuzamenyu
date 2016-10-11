@@ -33,12 +33,14 @@ $ bash menu
 * example menu
 
 ```
-1) --Launch-- Minecraft (full Ubuntu in separate environment)
-2) --Launch-- Ubuntu (full Ubuntu in Chrome window)
-3) --Launch-- Terminal (Ubuntu terminal in Chrome tab)
-4) --Quit menu--
-5) --Delete-- Delete Ubuntu (deletes all instances of Ubuntu)
-6) --Create-- Create a NEW Ubuntu (this takes a long while to create new enviroment)
+--Launch-- Full Ubuntu (full Ubuntu in separate environment)
+--Launch-- Ubuntu (Ubuntu in Chrome window)
+--Launch-- Terminal (Ubuntu terminal in Chrome tab)
+--Launch-- An Ubuntu Application in a Tab (e.g. gimp)
+--Launch-- An Ubuntu Application in a Window (e.g. gimp)
+--Quit menu ------------------------------------------------
+--Delete-- Delete Ubuntu (deletes all instances of Ubuntu)
+--Create-- Create a NEW Ubuntu (this takes a long while then launches in Chrome Window)
 Please enter your choice (number):
 
 
