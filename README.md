@@ -45,7 +45,7 @@ Please enter your choice (number):
 
 
 ```
-* You can re-enter menu at any time by typing `bah menu` at the shell prompt `$`.
+* You can re-enter menu at any time by typing `bash menu` at the shell prompt `$`.
 
 * IMPORTANT when creating a new Ubuntu enviroment last step seems to be entering a user name but you need to return then enter a password (then return) and then re-enter same password (then return) to complete setup.  
 
