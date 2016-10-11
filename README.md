@@ -49,7 +49,7 @@ Please enter your choice (number):
 
 * IMPORTANT when creating a new Ubuntu enviroment last step seems to be entering a user name but you need to return then enter a password (then return) and then re-enter same password (then return) to complete setup.  
 
-## Ununtu target file installation menu
+## Ubuntu target file installation menu
 
 * when you are in Ubuntu you can open up another menu by typing `menu` at prompt:
 
