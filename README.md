@@ -49,6 +49,24 @@ Please enter your choice (number):
 
 * IMPORTANT when creating a new Ubuntu enviroment last step seems to be entering a user name but you need to return then enter a password (then return) and then re-enter same password (then return) to complete setup.  
 
+## Ununtu target file installation menu
+
+* when you are in Ubuntu you can open up another menu by typing `menu` at prompt:
+
+```
+$ menu
+1) --Install-- Minecraft Game
+2) --Install-- Eclipse Integrated Development Editor
+3) --Install-- Gimp Image Editor
+4) --Install-- Alacarte Ubuntu Menu builder
+5) --Quit menu ------------------------------------------------
+Please enter your choice (number):
+```
+* this contains script to install popular software
+* Feel free to make pull requests or issues with new installation scripts for chromebook Ubuntu software
+* PLEASE BEAWARE THAT YOU ARE USING THIS SOFTWARE (supayuzameny) SOLELY AT YOU OWN RISK
+
+
 ## Files for advanced users
 * optionally, before creating new Ubuntu edit crucial.rc file (~/Downloads/crouton-crucial-master/crucial.rc)
 * crucial.rc: annotated runcom file for Crouton environments; required by crucial.sh; edit this first
